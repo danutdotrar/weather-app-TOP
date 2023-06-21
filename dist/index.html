@@ -7,7 +7,28 @@
         <title>Weather App</title>
     </head>
     <body>
-        <h1>Weather App</h1>
+        <header>
+            <h1>Weather App</h1>
+        </header>
+
+        <div class="search-bar" id="search-bar">
+            <form id="form">
+                <input type="text" placeholder="Search the city name..." />
+                <button id="search-button" class="search-button">Search</button>
+            </form>
+        </div>
+
+        <div class="weather-container" id="weather-container">
+            <div class="city-name" id="city-name">London</div>
+            <div class="city-details" id="city-details">
+                <div class="local-time" id="local-time">2023-06-21 10:04</div>
+                <div class="condition" id="condition">Partly Cloudy</div>
+                <div class="temp" id="temp">Temperature: 18 C</div>
+                <div class="humidity" id="humidity">Humidity: 68</div>
+                <div class="wind" id="wind">22 kph</div>
+            </div>
+        </div>
+
         <script src="main.js"></script>
     </body>
 </html>
