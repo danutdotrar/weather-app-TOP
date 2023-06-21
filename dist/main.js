@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\nconsole.log(\"webpack working!\");\r\n\r\n// Working with APIs (Application Programming Interfaces)\r\nfetch(\r\n    \"https://api.weatherapi.com/v1/current.json?key=70f95910843b4d8893b143641231806&q=london\"\r\n)\r\n    .then((res) => res.json())\r\n    .then(getTemp);\r\n\r\nfunction getTemp(data) {\r\n    console.log(data);\r\n}\r\n\n\n//# sourceURL=webpack://weather-app-top/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\n\r\n// Working with APIs (Application Programming Interfaces)\r\nfetch(\r\n    \"https://api.weatherapi.com/v1/current.json?key=70f95910843b4d8893b143641231806&q=london\"\r\n)\r\n    .then((res) => res.json())\r\n    .then(getTemp);\r\n\r\nfunction getTemp(data) {\r\n    console.log(data);\r\n}\r\n\n\n//# sourceURL=webpack://weather-app-top/./src/index.js?");
 
 /***/ })
 

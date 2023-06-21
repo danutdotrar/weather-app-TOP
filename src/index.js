@@ -1,5 +1,4 @@
 import "./style.css";
-console.log("webpack working!");
 
 // Working with APIs (Application Programming Interfaces)
 fetch(
