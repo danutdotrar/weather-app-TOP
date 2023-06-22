@@ -9,25 +9,63 @@ html {
     margin: 0;
     height: 100vh;
     font-family: "Lato", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
 }
 
 header {
-    outline: 1px solid red;
-    padding: 30px;
+    background-image: url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header::after {
+    content: "";
     position: absolute;
     top: 0;
-    width: 100vw;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.66);
+}
+
+header * {
+    z-index: 1;
+}
+
+header h1 {
+    padding: 0;
+    color: #fff;
+    margin: 15px 0 50px;
+}
+
+form {
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-h1 {
-    padding: 0;
-    margin: 0;
+form button {
+    position: absolute;
+    right: 2px;
+    border: 0;
+    background-color: #6b6363;
+    color: #fff;
+    padding: 14px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+form input {
+    padding: 16px 16px;
+    width: 400px;
+    border-radius: 50px;
+    border: 0;
+    outline: none;
+    font-size: 14px;
 }

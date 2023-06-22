@@ -22,7 +22,6 @@ async function getDataFromLocation(location) {
     );
     const data = await res.json();
 
-    console.log(data);
     updateDOM(data);
 }
 
@@ -47,5 +46,7 @@ function updateDOM(data) {
 // Event Listeners
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    getDataFromLocation(searchCity.value);
+    if (searchCity.value != "") {
+        getDataFromLocation(searchCity.value);
+    }
 });
