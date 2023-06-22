@@ -30,6 +30,7 @@ async function getDataFromLocation(location) {
 function updateDOM(data) {
     let content;
 
+    // Create content
     content = `<div class="city-name" id="city-name">${data.location.name}</div>
     <div class="city-details" id="city-details">
         <div class="local-time" id="local-time">${data.location.localtime}</div>
@@ -39,6 +40,7 @@ function updateDOM(data) {
         <div class="wind" id="wind">${data.current.wind_kph} kph</div>
     </div>`;
 
+    // Update container
     weatherContainer.innerHTML = content;
 }
 
