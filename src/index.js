@@ -1,5 +1,8 @@
 import "./style.css";
 
+const searchCity = document.getElementById("search-city");
+const searchBtn = document.getElementById("search-button");
+const weatherContainer = document.getElementById("weather-container");
 // Working with APIs (Application Programming Interfaces)
 // // Promises
 // fetch(
@@ -20,6 +23,27 @@ async function getDataFromLocation(location) {
     const data = await res.json();
 
     console.log(data);
+    updateDOM(data);
 }
 
-getDataFromLocation("new york");
+// Generate DOM data
+function updateDOM(data) {
+    let content;
+
+    content = `<div class="city-name" id="city-name">${data.location.name}</div>
+    <div class="city-details" id="city-details">
+        <div class="local-time" id="local-time">${data.location.localtime}</div>
+        <div class="condition" id="condition">${data.current.condition.text}</div>
+        <div class="temp" id="temp">Temperature: ${data.current.temp_c}</div>
+        <div class="humidity" id="humidity">Humidity: ${data.current.humidity}</div>
+        <div class="wind" id="wind">${data.current.wind_kph} kph</div>
+    </div>`;
+
+    weatherContainer.innerHTML = content;
+}
+
+// Event Listeners
+searchBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    getDataFromLocation(searchCity.value);
+});
