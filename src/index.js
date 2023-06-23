@@ -3,17 +3,6 @@ import "./style.css";
 const searchCity = document.getElementById("search-city");
 const searchBtn = document.getElementById("search-button");
 const weatherContainer = document.getElementById("weather-container");
-// Working with APIs (Application Programming Interfaces)
-// // Promises
-// fetch(
-//     "https://api.weatherapi.com/v1/current.json?key=70f95910843b4d8893b143641231806&q=london"
-// )
-//     .then((res) => res.json())
-//     .then(getTemp);
-
-// function getTemp(data) {
-// console.log(data);
-// }
 
 // Get the data from the api
 async function getDataFromLocation(location) {
