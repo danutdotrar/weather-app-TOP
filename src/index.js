@@ -19,13 +19,17 @@ function updateDOM(data) {
     let content;
 
     // Create content
-    content = `<div class="city-name" id="city-name">${data.location.name}</div>
+    content = ` <div class="city-name" id="city-name">${data.location.name}</div>
     <div class="city-details" id="city-details">
-        <div class="local-time" id="local-time">${data.location.localtime}</div>
-        <div class="condition" id="condition">${data.current.condition.text}</div>
-        <div class="temp" id="temp">Temperature: ${data.current.temp_c}</div>
-        <div class="humidity" id="humidity">Humidity: ${data.current.humidity}</div>
-        <div class="wind" id="wind">${data.current.wind_kph} kph</div>
+        <div class="date-state-container">
+            <div class="local-time" id="local-time">
+            ${data.location.localtime}
+            </div>
+            <div class="condition" id="condition">${data.current.condition.text}</div>
+        </div>
+        <div class="temp item" id="temp">Temperature: ${data.current.temp_c}</div>
+        <div class="humidity item" id="humidity">Humidity: ${data.current.humidity}</div>
+        <div class="wind item" id="wind">Wind: ${data.current.wind_kph} kph</div>
     </div>`;
 
     // Update container

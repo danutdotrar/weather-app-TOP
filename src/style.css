@@ -73,13 +73,15 @@ form input {
 .weather-container {
     margin: 30px auto;
     max-width: 100%;
-    width: 500px;
+    width: 650px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 15px;
     color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
+    position: relative;
 }
 
 .city-name {
@@ -103,4 +105,30 @@ form input {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     padding: 30px 0;
+}
+
+.city-details .item {
+    margin-bottom: 15px;
+}
+
+.city-details div:last-child {
+    margin-bottom: 0px;
+}
+
+.date-state-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 45px;
+}
+
+.local-time {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+}
+
+.condition {
+    position: absolute;
+    top: 15px;
+    right: 25px;
 }
