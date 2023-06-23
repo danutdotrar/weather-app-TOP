@@ -4,6 +4,9 @@ const searchCity = document.getElementById("search-city");
 const searchBtn = document.getElementById("search-button");
 const weatherContainer = document.getElementById("weather-container");
 
+// Define defaull location
+getDataFromLocation("bucharest");
+
 // Get the data from the api
 async function getDataFromLocation(location) {
     const res = await fetch(
@@ -27,7 +30,7 @@ function updateDOM(data) {
             </div>
             <div class="condition" id="condition">${data.current.condition.text}</div>
         </div>
-        <div class="temp item" id="temp">Temperature: ${data.current.temp_c}</div>
+        <div class="temp item" id="temp">Temperature: ${data.current.temp_c} C</div>
         <div class="humidity item" id="humidity">Humidity: ${data.current.humidity}</div>
         <div class="wind item" id="wind">Wind: ${data.current.wind_kph} kph</div>
     </div>`;
